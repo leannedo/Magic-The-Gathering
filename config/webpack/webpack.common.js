@@ -12,44 +12,39 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
+  experiments: {
+    asset: true
+  },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: 'ts-loader'
-        // use: {
-        //   loader: 'ts-loader',
-        //   options: {
-        //     useCache: true,
-        //     useBabel: true,
-        //     babelCore: '@babel/core',
-        //     configFileName: `${paths.src}/tsconfig.json`
-        //   },
-        // },
       },
-      // js
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
-      // CSS and Sass
       {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|png|svg)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        type: 'asset',
+        use: 'svgo-loader',
+      },
+      {
+        test: /\.txt$/i,
+        use: 'raw-loader',
       }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'My Skincare Haul',
+      title: 'Magic The Gathering',
       template: `${paths.public}/index.html`,
       filename: 'index.html',
     }),

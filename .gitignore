@@ -11,6 +11,9 @@
 # production
 /dist
 
+#data
+src/data/magic-comp-rules.txt
+
 # misc
 .DS_Store
 .env.local

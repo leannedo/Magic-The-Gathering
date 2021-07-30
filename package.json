@@ -19,7 +19,7 @@
   "scripts": {
     "start": "webpack serve --env NODE_ENV=dev --config config/webpack/webpack.config.js",
     "build": "webpack --env NODE_ENV=prod --config config/webpack/webpack.config.js",
-    "lint": "eslint . --fix --ext .jsx,.js --no-error-on-unmatched-pattern"
+    "lint": "eslint . --fix --ext .tsx,.ts --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -33,7 +33,10 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
     "@babel/runtime": "^7.14.6",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.6",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
@@ -46,6 +49,9 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^4.9.0",
     "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "prettier": "^2.3.2",
+    "raw-loader": "^4.0.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.0.0",
     "ts-loader": "^9.2.3",
