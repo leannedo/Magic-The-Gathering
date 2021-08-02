@@ -1,0 +1,19 @@
+.sider {
+    padding: 24px;
+    border-right: 1px solid var(--background-color);
+    flex: 0 0 300px;
+    background-color: var(--primary-color);
+}
+
+.sidenav {
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    cursor: pointer;
+}
+
+.section-list {
+    padding: 0;
+}

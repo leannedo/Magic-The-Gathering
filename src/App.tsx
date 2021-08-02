@@ -1,12 +1,14 @@
-import React from "react";
-import Layout from './component/Layout'
+import React from 'react';
+import Layout from './component/Layout';
 import './styles/variables.scss';
+
+import { GameRuleProvider } from './contexts/GameRuleContext';
 
 const App = () => {
   return (
-    <div className="App">
-      <Layout/>
-    </div>
+    <GameRuleProvider>
+      <Layout />
+    </GameRuleProvider>
   );
 };
 
