@@ -22,7 +22,9 @@ export const formatedData = () => {
   const sanitizedData = data
     .split(/(\r\n\s?\r\n)/)
     .filter((l) => !/\r\n\s?\r\n/.test(l))
-    .map((l) => l.replace('\r\n', ''));
+    .map((l) => l.replace(/^\r\n/, ''));
+
+  console.log(sanitizedData);
 
   const gameRules = sanitizedData.slice(
     sanitizedData.indexOf('Credits') + 1,
@@ -84,4 +86,5 @@ export const formatedData = () => {
   });
 
   console.log(MagicTheGathering);
+  return MagicTheGathering;
 };

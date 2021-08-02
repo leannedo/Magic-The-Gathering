@@ -3,17 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.16.7",
-    "moment": "^2.27.0",
     "node-sass": "^6.0.1",
-    "rc-tween-one": "^2.7.2",
     "react": "^16.13.1",
     "react-content-loader": "^6.0.3",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "ts-node": "^10.1.0"
   },
   "scripts": {

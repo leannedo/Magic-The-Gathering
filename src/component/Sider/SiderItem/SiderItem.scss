@@ -1,0 +1,28 @@
+.section-item {
+    padding-left: 28px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    
+    .section-link {
+        font-size: 18px;
+    }
+
+    .chapter-link {
+        font-size: 16px;
+    }
+}
+
+.item-link {
+    color: var(--border-color);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--secondary-color);
+    }
+}
+
+.chapter-list {
+    padding-left: 10px;
+}

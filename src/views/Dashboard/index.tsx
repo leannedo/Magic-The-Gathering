@@ -8,7 +8,6 @@ const Dashboard = () => {
 
   return (
     <div className="container">
-      <h1 className="title">nothing</h1>
       <p />
     </div>
   );
