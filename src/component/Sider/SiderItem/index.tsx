@@ -1,32 +1,42 @@
 import React, { useState } from 'react';
 import './SiderItem.scss';
-import { useGameRule } from '../../../contexts/GameRuleContext';
+import { NavLink } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+import { matchPath } from 'react-router';
 
-const SiderItem = ({ section, chapters }) => {
-  const [showChapter, setShowChapter] = useState(false);
-  const { setGameRule } = useGameRule();
+const SiderItem = ({ sectionIdx, section }) => {
+  const { pathname } = useLocation();
 
-  const onClickHandler = (chapter) => {
-    setGameRule(chapter[1].content);
-    console.log(Object.values(chapter[1].content));
-  };
+  const routeParams = matchPath(pathname, { path: '/section/:sectionId' });
+
+  const [showChapter, setShowChapter] = useState(
+    routeParams.params.sectionId === sectionIdx || null,
+  );
 
   const showChapterHandler = () => {
     setShowChapter(!showChapter);
   };
 
   return (
-    <li className="section-item" onClick={showChapterHandler}>
-      <a href={`#${section}`} className="item-link section-link">
-        {section}
+    <li className="section-item">
+      <a className="item-link section-link" onClick={showChapterHandler}>
+        {section.title}
       </a>
       {showChapter && (
         <ul className="chapter-list">
-          {Object.entries(chapters).map((chapterArr: any, index) => (
-            <li key={index} className="chapter-item" onClick={() => onClickHandler(chapterArr)}>
-              <a href={`#${section}-${chapterArr[1].title}`} className="item-link chapter-link">
-                {`${chapterArr[0]}. ${chapterArr[1].title}`}
-              </a>
+          {Object.entries(section.content).map(([chapterIdx, { title }]) => (
+            <li key={chapterIdx} className="chapter-item">
+              <NavLink
+                activeStyle={{
+                  fontWeight: 'bold',
+                  color: 'red',
+                }}
+                to={`/section/${sectionIdx}/chapter/${chapterIdx}`}
+                replace
+                className="item-link chapter-link"
+              >
+                {`${chapterIdx}. ${title}`}
+              </NavLink>
             </li>
           ))}
         </ul>

@@ -1,9 +1,13 @@
 import { useGameRule } from '../../contexts/GameRuleContext';
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import './Main.scss';
 
 const Main = () => {
-  const { gameRule } = useGameRule();
+  const { gameRules } = useGameRule();
+  let { sectionIdx, chapterIdx } = useParams();
+
+  const gameRule = gameRules[sectionIdx].content[chapterIdx].content;
 
   return (
     <div className="main-content">

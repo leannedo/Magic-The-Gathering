@@ -1,15 +1,12 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
+import { formatedData } from '../data/formatedData.js';
 
 const GameRuleContext = createContext('');
 
 const GameRuleProvider = ({ children }) => {
-  const [gameRule, setGameRule] = useState('The content');
+  const gameRules = formatedData();
 
-  return (
-    <GameRuleContext.Provider value={{ gameRule, setGameRule }}>
-      {children}
-    </GameRuleContext.Provider>
-  );
+  return <GameRuleContext.Provider value={{ gameRules }}>{children}</GameRuleContext.Provider>;
 };
 
 const useGameRule = () => useContext(GameRuleContext);

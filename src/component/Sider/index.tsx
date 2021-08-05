@@ -11,8 +11,8 @@ const Sider = () => {
       <div className="sidenav">
         <h1 className="title">Magic The Gathering</h1>
         <ul className="section-list">
-          {Object.values(gameRules).map((obj: any, index) => (
-            <SiderItem section={`${index + 1}. ${obj.title}`} key={index} chapters={obj.content} />
+          {Object.entries(gameRules).map(([sectionIdx, section]) => (
+            <SiderItem sectionIdx={sectionIdx} section={section} key={sectionIdx} />
           ))}
         </ul>
       </div>
