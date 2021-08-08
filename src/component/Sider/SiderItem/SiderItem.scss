@@ -1,28 +1,46 @@
-.section-item {
-    padding-left: 28px;
-    font-weight: 700;
-    margin-top: 24px;
+.section-container {
+    margin-top: 32px;
     margin-bottom: 24px;
-    line-height: 1.5;
-    
-    .section-link {
-        font-size: 18px;
+}
+
+.section-link {
+    text-transform: uppercase;;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+        border-left: 4px solid var(--accent-color);
+    }
+}
+
+.chapter-link {
+    display: block;
+    font-weight: normal;
+    padding: 10px 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    transition: background-color .2s ease-in-out;
+
+    &.active {
+        background-color: var(--primary-lighten-color);
     }
 
-    .chapter-link {
-        font-size: 16px;
+    &:hover {
+        background-color: var(--primary-lighten-color);
     }
 }
 
 .item-link {
-    color: var(--border-color);
+    color: var(--white-color);
+    display: block;
     text-decoration: none;
-
-    &:hover {
-        color: var(--secondary-color);
-    }
+    border-bottom: none;
 }
 
 .chapter-list {
-    padding-left: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
 }

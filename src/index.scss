@@ -1,20 +1,23 @@
 body {
   height: 100%;
+  background-color: var(--primary-color);
 }
 
 body {
   margin: 0;
-  font-family: Raleway, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   a {
     text-decoration: none;
+    color: var(--link-color);
+    font-weight: 700;
+    border-bottom: 2px solid var(--link-color);;
   }
 
   li {
     list-style: none;
+    padding: 0;
   }
 }

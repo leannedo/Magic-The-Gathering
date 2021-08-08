@@ -1,0 +1,35 @@
+.content {
+    background-color: var(--background-color);
+    color: var(--text-color)
+}
+
+.content-header {
+    padding: 16px 24px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.breadcumb {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rule-container {
+    padding: 24px;
+    padding-top: 16px;
+}
+
+.rule {
+    line-height: 1.5;
+    margin-bottom: 8px;
+
+    p {
+        margin-top: 2px;
+    }
+}
+
+.rule-index {
+    font-weight: 700;
+}

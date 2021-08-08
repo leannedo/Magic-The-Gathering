@@ -1,17 +1,16 @@
 .sider {
-    padding: 24px;
-    border-right: 1px solid var(--background-color);
-    flex: 0 0 300px;
+    padding-top: 36px;
+    flex: 0 0 350px;
     background-color: var(--primary-color);
-}
-
-.sidenav {
+    color: var(--white-color);
     height: 100%;
 }
 
 .title {
-    text-align: center;
-    cursor: pointer;
+    font-size: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-bottom: none;
 }
 
 .section-list {

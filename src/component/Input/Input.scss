@@ -1,0 +1,82 @@
+.input-wrapper {
+    margin-bottom: 25px;
+    position: relative;
+  
+    label {
+      font-size: var(--st-input-label-font-size);
+      font-weight: var(--st-input-font-weight);
+      color: var(--st-input-label-color);
+    }
+  
+    input {
+      font-family: inherit !important;
+      outline: none;
+      width: 100%;
+      padding: 20px;
+      margin-top: 10px;
+      border: 2px solid rgba(204, 204, 204, 0.2);
+      border-radius: 10px;
+    //   user-focus: none;
+      color: var(--st-input-color);
+      font-size: var(--st-input-font-size);
+      font-weight: var(--st-input-font-weight);
+  
+      &:focus {
+        border: 2px solid var(--st-input-focus-color);
+      }
+    }
+  
+    .input-error {
+      font-size: var(--st-error-msg-font-size);
+      font-weight: bold;
+      color: var(--st-error-msg-color);
+      margin-top: 10px;
+      text-align: right;
+    }
+  
+    .placeholder-icon {
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      color: var(--st-input-focus-color);
+      font-size: 20px;
+    }
+  
+    ::placeholder {
+      font-size: 16px;
+      font-weight: 700;
+      color: #000;
+    }
+  
+    &.invalid {
+      input {
+        border: 2px solid #fec7c1;
+      }
+  
+      .st-placeholder-icon {
+        color: #fec7c1;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 745px) {
+    .input-wrapper {
+      margin-bottom: 20px;
+      position: relative;
+  
+      label {
+        font-size: var(--st-annotation-font-size-md);
+      }
+      input {
+        font-size: var(--st-annotation-font-size-lg);
+      }
+  
+      .placeholder-icon {
+        font-size: 16px;
+      }
+  
+      ::placeholder {
+        font-size: var(--st-annotation-font-size-lg);
+      }
+    }
+  }

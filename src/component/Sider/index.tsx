@@ -1,21 +1,22 @@
 import React from 'react';
 import SiderItem from './SiderItem';
-import './Sider.scss';
 import { formatedData } from '../../data/formatedData.js';
+import { Link } from 'react-router-dom';
+import './Sider.scss';
 
 const Sider = () => {
   const gameRules = formatedData();
 
   return (
     <aside className="sider">
-      <div className="sidenav">
-        <h1 className="title">Magic The Gathering</h1>
-        <ul className="section-list">
-          {Object.entries(gameRules).map(([sectionIdx, section]) => (
-            <SiderItem sectionIdx={sectionIdx} section={section} key={sectionIdx} />
-          ))}
-        </ul>
-      </div>
+      <Link to="/" className="title">
+        Magic The Gathering
+      </Link>
+      <ul className="section-list">
+        {Object.entries(gameRules).map(([sectionIdx, section]) => (
+          <SiderItem sectionIdx={sectionIdx} section={section} key={sectionIdx} />
+        ))}
+      </ul>
     </aside>
   );
 };

@@ -44,7 +44,7 @@ export const formatedData = () => {
       };
     } else if (isChapter(line)) {
       const chapterIdx = line.match(/^[0-9]{3,}(?!\.[0-9])/)[0];
-      const text = line.replace(chapterIdx, '').replace('.', '').trim();
+      const text = line.replace(chapterIdx, '').replace(/^\./, '').trim();
       const sectionIdx = chapterIdx.slice(0, chapterIdx.length - 2);
 
       MagicTheGathering[sectionIdx] = {
@@ -59,7 +59,7 @@ export const formatedData = () => {
       };
     } else if (isRule(line)) {
       const ruleIdx = line.match(/^[0-9]{3,}\.[0-9]+[a-z]?/)[0];
-      const text = line.replace(ruleIdx, '').replace('.', '').trim();
+      const text = line.replace(ruleIdx, '').replace(/^\./, '').trim();
 
       const ruleParts = ruleIdx.split('.');
       const chapterIdx = ruleParts[0];

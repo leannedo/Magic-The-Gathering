@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './SiderItem.scss';
-import { NavLink } from 'react-router-dom'
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { matchPath } from 'react-router';
 
 const SiderItem = ({ sectionIdx, section }) => {
@@ -10,7 +9,7 @@ const SiderItem = ({ sectionIdx, section }) => {
   const routeParams = matchPath(pathname, { path: '/section/:sectionId' });
 
   const [showChapter, setShowChapter] = useState(
-    routeParams.params.sectionId === sectionIdx || null,
+    routeParams?.params?.sectionId === sectionIdx || null,
   );
 
   const showChapterHandler = () => {
@@ -18,22 +17,25 @@ const SiderItem = ({ sectionIdx, section }) => {
   };
 
   return (
-    <li className="section-item">
-      <a className="item-link section-link" onClick={showChapterHandler}>
-        {section.title}
-      </a>
+    <li className="section-container">
+      <div className="section-item">
+        <a
+          className={`item-link section-link ${showChapter ? 'active' : ''}`}
+          onClick={showChapterHandler}
+        >
+          {`${sectionIdx}. ${section.title}`}
+        </a>
+      </div>
       {showChapter && (
         <ul className="chapter-list">
           {Object.entries(section.content).map(([chapterIdx, { title }]) => (
             <li key={chapterIdx} className="chapter-item">
               <NavLink
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'red',
-                }}
+                activeClass="active"
                 to={`/section/${sectionIdx}/chapter/${chapterIdx}`}
                 replace
                 className="item-link chapter-link"
+                onClick={() => scrollTo(0, 0)}
               >
                 {`${chapterIdx}. ${title}`}
               </NavLink>
