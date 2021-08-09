@@ -2,9 +2,9 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useGameRule } from '../../contexts/GameRuleContext';
 import { useParams } from 'react-router-dom';
-import './Content.scss';
+import './RulePage.scss';
 
-const Content = () => {
+const RulePage = () => {
   const { gameRules } = useGameRule();
   let { sectionIdx, chapterIdx } = useParams();
 
@@ -44,15 +44,11 @@ const Content = () => {
   };
 
   return (
-    <div className="content">
-      <div className="content-header">
-        <div className="breadcumb">
-          {[gameRules[sectionIdx].title, gameRules[sectionIdx].content[chapterIdx].title].join(
-            ' > ',
-          )}
-        </div>
-      </div>
-      <div className="rule-container">
+    <div className="rules-view">
+      <h2 className="breadcumb title">
+        {[gameRules[sectionIdx].title, gameRules[sectionIdx].content[chapterIdx].title].join(' > ')}
+      </h2>
+      <div className="rules-container">
         {Object.entries(gameRule).map(([index, text]: [string, string]) => (
           <div key={index} className="rule">
             <div id={index} className="rule-index">{`${index}.`}</div>
@@ -63,4 +59,4 @@ const Content = () => {
     </div>
   );
 };
-export default Content;
+export default RulePage;

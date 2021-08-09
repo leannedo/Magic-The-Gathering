@@ -1,0 +1,37 @@
+.app .search-modal {
+    padding: 0;
+    min-height: auto;
+    max-height: 800px;
+    min-width: 800px;
+    overflow: scroll;
+    border-radius: var(--border-radius);
+    background-color: var(--modal-background-color);
+}
+
+.search-input {
+    width: 100%;
+}
+
+.search-see-more {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 24px;
+    color: var(--text-color);
+    border-bottom: none;
+
+    span {
+        margin-right: 4px;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover span {
+        margin-right: 8px;
+    }
+}
+
+.modal-search-results {
+    padding: 8px 12px 12px;
+}

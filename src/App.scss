@@ -1,0 +1,19 @@
+.app {
+    min-height: 100vh;
+    align-items: stretch;
+    height: 100%;
+    display: flex;
+}
+
+.main-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 32px;
+    line-height: 1.5;
+    width: 100%;
+
+    .title {
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchModal from '../SearchModal';
+import SearchModal from '../Search/SearchModal';
 import SiderItem from './SiderItem';
 import { Link } from 'react-router-dom';
 import { Search } from 'react-feather';
@@ -23,7 +23,7 @@ const Sider = () => {
     <aside className="sider">
       <div className="title-header">
         <Link to="/" className="page-title">
-          Magic The Gathering
+          <h1>Magic The Gathering</h1>
         </Link>
         <div className="search-trigger" onClick={openSearchModal}>
           <Search />

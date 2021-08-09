@@ -1,0 +1,33 @@
+.search-results {
+    width: 100%;
+    color: var(--text-color);
+}
+
+.search-count {
+    padding: 24px 12px 12px;
+    font-size: 18px;
+}
+
+.search-item {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--accent-color);
+
+        .search-keyword {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.search-title {
+    font-weight: 700;
+}
+
+.search-keyword {
+    font-weight: 700;
+    color: var(--accent-color);
+}
