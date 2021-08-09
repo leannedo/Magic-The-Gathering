@@ -1,10 +1,11 @@
 import React from 'react';
 import './Input.scss';
 
-const Input = ({ iconClassName, label, placeholder, name, onChange, value, error }) => (
-  <div className={`input-wrapper ${error ? 'invalid' : ''}`}>
-    <div style={{ width: '100%' }}>
-      <label>{label}</label>
+const Input = ({ className = '', icon, label, placeholder, name, onChange, value }) => (
+  <div className="input-wrapper">
+    {label && <label>{label}</label>}
+    <div className="input">
+      {icon && <span className="input-icon">{icon}</span>}
       <input
         type="text"
         id={name}
@@ -12,10 +13,9 @@ const Input = ({ iconClassName, label, placeholder, name, onChange, value, error
         placeholder={placeholder}
         onChange={onChange}
         value={value}
+        className={className}
       />
-      <i className={`${iconClassName} placeholder-icon`} />
     </div>
-    <div className="input-error">{error}</div>
   </div>
 );
 

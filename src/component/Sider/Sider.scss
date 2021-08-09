@@ -6,11 +6,24 @@
     height: 100%;
 }
 
-.title {
-    font-size: 24px;
+.title-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-right: 10px;
     border-bottom: none;
+}
+
+.search-trigger {
+    color: var(--accent-color);
+    margin-top: 8px;
+    cursor: pointer;
 }
 
 .section-list {

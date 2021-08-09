@@ -1,5 +1,3 @@
-import Input from '../Input';
-import Modal from '../Modal';
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useGameRule } from '../../contexts/GameRuleContext';
@@ -62,8 +60,6 @@ const Content = () => {
           </div>
         ))}
       </div>
-
-      <Input placeholder="Search game rule" />
     </div>
   );
 };

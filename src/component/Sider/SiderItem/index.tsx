@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './SiderItem.scss';
-import { NavLink, useLocation } from 'react-router-dom';
 import { matchPath } from 'react-router';
+import { NavLink, useLocation } from 'react-router-dom';
+import { ChevronUp, ChevronDown } from 'react-feather';
+import './SiderItem.scss';
 
 const SiderItem = ({ sectionIdx, section }) => {
   const { pathname } = useLocation();
@@ -18,13 +19,11 @@ const SiderItem = ({ sectionIdx, section }) => {
 
   return (
     <li className="section-container">
-      <div className="section-item">
-        <a
-          className={`item-link section-link ${showChapter ? 'active' : ''}`}
-          onClick={showChapterHandler}
-        >
+      <div className="section-item" onClick={showChapterHandler}>
+        <a className={`item-link section-link ${showChapter ? 'active' : ''}`}>
           {`${sectionIdx}. ${section.title}`}
         </a>
+        {showChapter ? <ChevronUp /> : <ChevronDown />}
       </div>
       {showChapter && (
         <ul className="chapter-list">

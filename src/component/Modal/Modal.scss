@@ -14,24 +14,18 @@
     }
   
     &.show {
-      display: flex;
-  
-      /** Avoid stacked backdrops leading to bad UI in case of stacked modals */
-      + .modal-wrapper.show {
-        .backdrop {
-          backdrop-filter: blur(0);
-        }
+      .modal {
+        opacity: 1;
       }
     }
   }
-  
-  .modal-wrapper.show .modal {
-    position: relative;
-    z-index: 1000;
-    border-radius: 40px;
-    background-color: #fff;
-    min-width: 600px;
-    min-height: 600px;
-    padding: 45px;
-    opacity: 1;
-  }
+
+.modal {
+  position: relative;
+  z-index: 1000;
+  border-radius: 40px;
+  min-width: 600px;
+  min-height: 600px;
+  padding: 45px;
+  background-color: var(--white-color);
+}
