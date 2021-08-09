@@ -1,11 +1,18 @@
 :root {
     /* #COLOR-SCHEME */
-    --primary-color: #292929;
-    --background-color: #f2f0e0;
-    --accent-color: #F3A475;
+    --primary-color: #28193C;
+    --background-color: #392755;
+    --accent-color: #BE74FF;
     --white-color: #fff;
-    --text-color: var(--primary-color);
+    --text-color: var(--white-color);
     --link-color: var(--accent-color);
-    --primary-lighten-color: #5e5e5e;
+    --primary-lighten-color: #463062;
     --grey-color: #a3a3a3;
+    --modal-background-color: #4A40E7;
+
+    /* #TYPOGRAPHY */
+    --font-family: "Poppins", sans-serif;
+    
+    /* #MISC */
+    --border-radius: 15px;
 }

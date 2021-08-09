@@ -34,7 +34,7 @@
     padding: 10px 16px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     transition: background-color .2s ease-in-out;
 
     &.active {

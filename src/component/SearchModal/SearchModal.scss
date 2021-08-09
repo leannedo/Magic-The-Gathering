@@ -1,8 +1,11 @@
 .main .search-modal {
     padding: 0;
     min-height: auto;
-    border-radius: 10px;
-    background-color: #fafafa;
+    max-height: 800px;
+    min-width: 800px;
+    overflow: scroll;
+    border-radius: var(--border-radius);
+    background-color: var(--modal-background-color);
 }
 
 .search-input {
@@ -15,27 +18,50 @@
 }
 
 .search-results-list {
-    padding: 8px 12px 16px;
+    padding: 8px 12px 12px;
 }
 
 .search-count {
-    color: var(--grey-color);
-    padding: 16px 24px 0;
+    padding: 24px 24px 0;
+    font-size: 18px;
 }
 
 .search-item {
     transition: background-color .2s ease-in-out;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     cursor: pointer;
 
     &:hover {
-        background-color: var(--background-color);
+        background-color: var(--accent-color);
     }
 }
 
 .search-title {
     margin-bottom: 8px;
     font-weight: 700;
-    font-size: 14px;
+}
+
+.search-keyword {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.search-see-more {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 24px;
+    cursor: pointer;
+
+    span {
+        margin-right: 4px;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover span {
+        margin-right: 8px;
+    }
 }

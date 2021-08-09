@@ -1,7 +1,7 @@
 import Input from '../Input';
 import Modal from '../Modal';
 import React from 'react';
-import { Search } from 'react-feather';
+import { Search, ArrowRight } from 'react-feather';
 import './SearchModal.scss';
 
 const SearchModal = ({ visible, closeModalHandler }) => {
@@ -13,13 +13,19 @@ const SearchModal = ({ visible, closeModalHandler }) => {
         <div className="search-results-list">
           <div className="search-item">
             <div className="search-title">Concept - Gameplay - 100.1a</div>
-            <div className="search-match">We win this game by playing this rule...</div>
+            <div className="search-match">
+              We win this game by <span className="search-keyword">playing</span> this rule...
+            </div>
           </div>
           <div className="search-item">
             <div className="search-title">Concept - Gameplay - 100.1a</div>
             <div className="search-match">We win this game by playing this rule...</div>
           </div>
         </div>
+      </div>
+      <div className="search-see-more">
+        <span>See more</span>
+        <ArrowRight />
       </div>
     </Modal>
   );
