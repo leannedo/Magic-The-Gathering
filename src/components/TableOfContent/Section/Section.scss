@@ -28,24 +28,6 @@
     }
 }
 
-.chapter-link {
-    display: block;
-    font-weight: normal;
-    padding: 10px 16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: var(--border-radius);
-    transition: background-color .2s ease-in-out;
-
-    &.active {
-        background-color: var(--primary-lighten-color);
-    }
-
-    &:hover {
-        background-color: var(--primary-lighten-color);
-    }
-}
-
 .item-link {
     color: var(--white-color);
     display: block;

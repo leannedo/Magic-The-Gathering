@@ -1,7 +1,7 @@
 import React from 'react';
 import './Input.scss';
 
-const Input = ({ className = '', icon, label, placeholder, name, onChange, value }) => (
+const Input = ({ className = '', icon, label, placeholder, name, onChange, onKeyUp, value }) => (
   <div className="input-wrapper">
     {label && <label>{label}</label>}
     <div className="input">
@@ -12,6 +12,7 @@ const Input = ({ className = '', icon, label, placeholder, name, onChange, value
         name={name}
         placeholder={placeholder}
         onChange={onChange}
+        onKeyUp={onKeyUp}
         value={value}
         className={className}
       />

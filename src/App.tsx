@@ -2,7 +2,7 @@ import React from 'react';
 import RulePage from './views/RulePage';
 import IntroPage from './views/IntroPage';
 import SearchPage from './views/SearchPage';
-import Sider from './components/Sider';
+import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { GameRuleProvider } from './contexts/GameRuleContext';
 import { Route, Switch } from 'react-router-dom';
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <GameRuleProvider>
         <div className="app">
-          <Sider />
+          <Sidebar />
           <div className="main-content">
             <Switch>
               <Route exact path="/" component={IntroPage} />

@@ -1,14 +1,12 @@
 import React from 'react';
 import SearchModal from '../Search/SearchModal';
-import SiderItem from './SiderItem';
+import TableOfContent from '../TableOfContent';
 import { Link } from 'react-router-dom';
 import { Search } from 'react-feather';
-import { useGameRule } from '../../contexts/GameRuleContext';
 import { useState } from 'react';
-import './Sider.scss';
+import './Sidebar.scss';
 
-const Sider = () => {
-  const { gameRules } = useGameRule();
+const Sidebar = () => {
   const [searchModalOpened, setSearchModalOpened] = useState(false);
 
   const openSearchModal = () => {
@@ -20,7 +18,7 @@ const Sider = () => {
   };
 
   return (
-    <aside className="sider">
+    <aside className="sidebar">
       <div className="title-header">
         <Link to="/" className="page-title">
           <h1>Magic The Gathering</h1>
@@ -29,14 +27,10 @@ const Sider = () => {
           <Search />
         </div>
       </div>
-      <ul className="section-list">
-        {Object.entries(gameRules).map(([sectionIdx, section]) => (
-          <SiderItem sectionIdx={sectionIdx} section={section} key={sectionIdx} />
-        ))}
-      </ul>
+      <TableOfContent />
       <SearchModal visible={searchModalOpened} closeModalHandler={closeSearchModal} />
     </aside>
   );
 };
 
-export default Sider;
+export default Sidebar;
