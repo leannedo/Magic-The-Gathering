@@ -1,6 +1,6 @@
 import Input from '../../Input';
 import Modal from '../../Modal';
-import React from 'react';
+import React, { KeyboardEvent } from 'react';
 import SearchResult from '../SearchResult';
 import { ArrowRight, Search } from 'react-feather';
 import { Link, useHistory } from 'react-router-dom';
@@ -10,7 +10,7 @@ const SearchModal = ({ visible, closeModalHandler }) => {
   const history = useHistory();
   const toSearchPageUrl = (searchTerm = '') => `/search?query=${searchTerm}`;
 
-  const onKeyUp = (event) => {
+  const onKeyUp = (event: KeyboardEvent) => {
     // Enter key
     if (event.keyCode === 13) {
       closeModalHandler();

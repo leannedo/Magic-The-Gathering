@@ -1,6 +1,5 @@
 .section-container {
-    margin-top: 32px;
-    margin-bottom: 24px;
+    margin-top: 12px;
 }
 
 .section-item {
@@ -9,7 +8,6 @@
     justify-content: space-between;
 
     svg {
-        margin-bottom: 10px;
         margin-right: 16px;
         color: var(--primary-lighten-color);
     }
@@ -19,7 +17,6 @@
     text-transform: uppercase;;
     padding: 10px 20px;
     padding-right: 10px;
-    margin-bottom: 10px;
     cursor: pointer;
 
     &:hover,

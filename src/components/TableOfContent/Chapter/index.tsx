@@ -6,7 +6,7 @@ const Chapter = ({ sectionIdx, chapterIdx, chapterTitle }) => {
   return (
     <li key={chapterIdx} className="chapter-item">
       <NavLink
-        activeClass="active"
+        activeClassName="active"
         to={`/section/${sectionIdx}/chapter/${chapterIdx}`}
         replace
         className="item-link chapter-link"
