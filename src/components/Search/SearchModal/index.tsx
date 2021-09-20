@@ -6,9 +6,12 @@ import { ArrowRight, Search } from 'react-feather';
 import { Link, useHistory } from 'react-router-dom';
 import './SearchModal.scss';
 
+const SEARCH_RESULT_LIMIT = 5;
+
 const SearchModal = ({ visible, closeModalHandler }) => {
   const history = useHistory();
   const toSearchPageUrl = (searchTerm = '') => `/search?query=${searchTerm}`;
+  const searchResults = [];
 
   const onKeyUp = (event: KeyboardEvent) => {
     // Enter key
@@ -27,12 +30,14 @@ const SearchModal = ({ visible, closeModalHandler }) => {
         onKeyUp={onKeyUp}
       />
       <div className="modal-search-results">
-        <SearchResult />
+        <SearchResult results={searchResults} searchTerm={''} />
       </div>
-      <Link to={toSearchPageUrl()} className="search-see-more" onClick={closeModalHandler}>
-        <span>See more</span>
-        <ArrowRight />
-      </Link>
+      {searchResults.length > SEARCH_RESULT_LIMIT && (
+        <Link to={toSearchPageUrl()} className="search-see-more" onClick={closeModalHandler}>
+          <span>See more</span>
+          <ArrowRight />
+        </Link>
+      )}
     </Modal>
   );
 };

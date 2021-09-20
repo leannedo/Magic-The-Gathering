@@ -1,3 +1,11 @@
 .rules-container {
     padding-top: 16px;
 }
+
+.breadcumb {
+    svg {
+        margin: 0 4px;
+        position: relative;
+        top: 4px;
+    }
+}

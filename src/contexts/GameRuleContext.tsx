@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import { formatedData } from '../data/formatedData.js';
 
-const GameRuleContext = createContext('');
+const GameRuleContext = createContext({});
 
 const GameRuleProvider = ({ children }) => {
   const gameRules = formatedData();

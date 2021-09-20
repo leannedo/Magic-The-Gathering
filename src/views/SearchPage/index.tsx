@@ -1,14 +1,16 @@
 import React from 'react';
 import SearchResult from '../../components/Search/SearchResult';
+import { useLocation } from 'react-router-dom';
 import './SearchPage.scss';
 
 const SearchPage = () => {
+  const searchTerm = new URLSearchParams(useLocation().search)?.get('query');
   return (
     <div className="search-view">
       <h2 className="title">
-        Search results for <span className="search-keyword">pig</span>
+        Search results for <span className="search-term">{searchTerm}</span>
       </h2>
-      <SearchResult />
+      <SearchResult results={[]} searchTerm={searchTerm} />
     </div>
   );
 };
