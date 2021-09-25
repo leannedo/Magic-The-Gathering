@@ -2,7 +2,7 @@
 
 ## Project overview
 
-A project for Reaktor Junior Developer Recruitment 2021 in which the task is to build an interactive, hyperlinked rulebook application for a card game, of which rules are described in txt file. You can read the complete requirements here. 🔥 
+A project for Reaktor Junior Developer Recruitment 2021 in which the task is to build an interactive, hyperlinked rulebook application for a card game, of which rules are described in txt file. You can read the complete requirements [here](https://github.com/leannedo/Magic-The-Gathering/blob/main/requirement.md). 🔥 
 
 <br/>
 
