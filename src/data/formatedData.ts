@@ -1,24 +1,25 @@
 import data from './magic-comp-rules.txt';
+import { GameRules } from './rule-types';
 
-const isSection = (str) => {
+const isSection = (str: string): boolean => {
   const sectionRegex = /^[0-9]{1,2}\./;
 
   return sectionRegex.test(str);
 };
 
-const isChapter = (str) => {
+const isChapter = (str: string): boolean => {
   const chapterRegex = /^[0-9]{3,}(?!\.[0-9])/;
 
   return chapterRegex.test(str);
 };
 
-const isRule = (str) => {
+const isRule = (str: string): boolean => {
   const ruleRegex = /^[0-9]{3,}\.[0-9]+[a-z]?/;
 
   return ruleRegex.test(str);
 };
 
-export const formatedData = () => {
+export const formatedData = (): GameRules => {
   const sanitizedData = data
     .split(/(\r\n\s?\r\n)/)
     .filter((l) => !/\r\n\s?\r\n/.test(l))

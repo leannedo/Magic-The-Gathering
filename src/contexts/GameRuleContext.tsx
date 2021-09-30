@@ -1,9 +1,14 @@
 import React, { createContext, useContext } from 'react';
-import { formatedData } from '../data/formatedData.js';
+import { formatedData } from '../data/formatedData';
+import { GameRules } from '../data/rule-types';
 
-const GameRuleContext = createContext({});
+type GameRuleContextType = {
+  gameRules: GameRules;
+};
 
-const GameRuleProvider = ({ children }) => {
+const GameRuleContext = createContext<GameRuleContextType | Record<string, never>>({});
+
+const GameRuleProvider = ({ children }: { children: React.ReactNode }): JSX.Element => {
   const gameRules = formatedData();
 
   return <GameRuleContext.Provider value={{ gameRules }}>{children}</GameRuleContext.Provider>;

@@ -7,7 +7,11 @@ const CHAPTER_AND_RULE_REGEX = /[0-9]{3,}\.?[0-9]*[a-z]?/g;
 const RULE_REGEX = /[0-9]{3,}\.[0-9]+[a-z]?/;
 const HYPERLINK_SEPARATOR = '<hpl>';
 
-const Rule = ({ ruleText }) => {
+interface RuleProps {
+  ruleText: string;
+}
+
+const Rule = ({ ruleText }: RuleProps): JSX.Element => {
   const foundHyperLink = CHAPTER_AND_RULE_REGEX.test(ruleText);
 
   const toPath = (text: string): string => {

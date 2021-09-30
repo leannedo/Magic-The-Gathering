@@ -6,7 +6,7 @@ import { Search } from 'react-feather';
 import { useState } from 'react';
 import './Sidebar.scss';
 
-const Sidebar = () => {
+const Sidebar = (): JSX.Element => {
   const [searchModalOpened, setSearchModalOpened] = useState(false);
 
   const openSearchModal = () => {
