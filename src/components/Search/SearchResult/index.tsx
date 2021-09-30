@@ -1,7 +1,17 @@
 import React from 'react';
 import './SearchResult.scss';
 
-const SearchResult = ({ results = [], searchTerm }) => {
+interface Result {
+  id: string;
+  match: string;
+}
+
+interface SearchResultProps {
+  results: Result[];
+  searchTerm: string;
+}
+
+const SearchResult = ({ results = [], searchTerm }: SearchResultProps): JSX.Element => {
   const renderSearchMatch = () => {
     return (
       <div className="search-match">

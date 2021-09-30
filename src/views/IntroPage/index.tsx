@@ -1,7 +1,7 @@
 import React from 'react';
 import './IntroPage.scss';
 
-const IntroPage = () => {
+const IntroPage = (): JSX.Element => {
   return (
     <div className="intro-view">
       <h2 className="title">Introduction</h2>

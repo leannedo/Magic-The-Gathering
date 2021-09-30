@@ -7,7 +7,7 @@ import './RulePage.scss';
 
 const LINE_SEPARATOR = /\r\n/;
 
-const RulePage = () => {
+const RulePage = (): JSX.Element => {
   const { gameRules } = useGameRule();
   const { sectionIdx, chapterIdx } = useParams();
 

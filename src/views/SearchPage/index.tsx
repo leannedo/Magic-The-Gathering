@@ -3,7 +3,7 @@ import SearchResult from '../../components/Search/SearchResult';
 import { useLocation } from 'react-router-dom';
 import './SearchPage.scss';
 
-const SearchPage = () => {
+const SearchPage = (): JSX.Element => {
   const searchTerm = new URLSearchParams(useLocation().search)?.get('query');
   return (
     <div className="search-view">

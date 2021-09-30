@@ -8,7 +8,12 @@ import './SearchModal.scss';
 
 const SEARCH_RESULT_LIMIT = 5;
 
-const SearchModal = ({ visible, closeModalHandler }) => {
+interface SearchModalProps {
+  visible: boolean;
+  closeModalHandler: () => void;
+}
+
+const SearchModal = ({ visible, closeModalHandler }: SearchModalProps): JSX.Element => {
   const history = useHistory();
   const toSearchPageUrl = (searchTerm = '') => `/search?query=${searchTerm}`;
   const searchResults = [];

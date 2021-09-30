@@ -2,7 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Chapter.scss';
 
-const Chapter = ({ sectionIdx, chapterIdx, chapterTitle }) => {
+interface ChapterProps {
+  sectionIdx: string;
+  chapterIdx: string;
+  chapterTitle: string;
+}
+
+const Chapter = ({ sectionIdx, chapterIdx, chapterTitle }: ChapterProps): JSX.Element => {
   return (
     <li key={chapterIdx} className="chapter-item">
       <NavLink

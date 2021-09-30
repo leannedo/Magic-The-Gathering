@@ -4,8 +4,14 @@ import { ChevronDown, ChevronUp } from 'react-feather';
 import { matchPath } from 'react-router';
 import { useLocation } from 'react-router-dom';
 import './Section.scss';
+import { Section } from '../../../data/rule-types';
 
-const Section = ({ sectionIdx, section }) => {
+interface SectionProps {
+  sectionIdx: string;
+  section: Section;
+}
+
+const Section = ({ sectionIdx, section }: SectionProps): JSX.Element => {
   const { pathname } = useLocation();
 
   const routeParams = matchPath(pathname, { path: '/section/:sectionId' });

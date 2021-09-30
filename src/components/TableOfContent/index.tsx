@@ -3,7 +3,7 @@ import Section from '../TableOfContent/Section';
 import { useGameRule } from '../../contexts/GameRuleContext';
 import './TableOfContent.scss';
 
-const TableOfContent = () => {
+const TableOfContent = (): JSX.Element => {
   const { gameRules } = useGameRule();
 
   return (

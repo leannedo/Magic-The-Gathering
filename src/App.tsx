@@ -8,7 +8,7 @@ import { GameRuleProvider } from './contexts/GameRuleContext';
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <Router>
       <GameRuleProvider>
